@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Trivia App (Dagger)</string>
+    <string name="title_activity_trivia">TriviaActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="name_hint">Name</string>
+    <string name="what_is_your_name">What is your name?</string>
+    <string name="best_cricketer_ques">Who is the best cricketer in the world?</string>
+    <string name="national_flag_ques">What are the colors in the Indian national flag?</string>
+    <string name="history_button_label">Click to see history</string>
+
+    <string name="sachin_tendulkar">Sachin Tendulkar</string>
+    <string name="virat_kohli">Virat Kohli</string>
+    <string name="adam_gilchirst">Adam Gilchirst</string>
+    <string name="jacques_kallis">Jacques Kallis</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.anisjamadar26.triviaappdagger.entity.GameEntity" />
+    </data>
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="10dp"
+    >
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/dltextView_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{model.userName}"
+        style="@style/data_text" />
+    <TextView
+        android:id="@+id/dltextView_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{model.dateTime}"
+        style="@style/data_text" />
+
+    <TextView
+        android:id="@+id/dltextView_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Here are the answers selected:"
+        style="@style/data_text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/best_cricketer_ques"
+        style="@style/data_text"/>
+
+    <TextView
+        android:id="@+id/dltextView_bestCrickAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{model.bestCricketer}"
+        style="@style/data_text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/national_flag_ques"
+        style="@style/data_text"/>
+
+    <TextView
+        android:id="@+id/dltextView_natFlagAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{model.flagColors}"
+        style="@style/data_text"/>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
+</layout>

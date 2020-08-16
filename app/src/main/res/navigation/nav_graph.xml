@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userNameFragment">
+
+    <fragment
+        android:id="@+id/userNameFragment"
+        android:name="com.anisjamadar26.triviaappdagger.ui.UserNameFragment"
+        android:label="fragment_user_name"
+        tools:layout="@layout/fragment_user_name" >
+        <action
+            android:id="@+id/action_getUserNameFragment_to_bestCricketerFragment"
+            app:destination="@id/bestCricketerFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/bestCricketerFragment"
+        android:name="com.anisjamadar26.triviaappdagger.ui.BestCricketerFragment"
+        android:label="fragment_best_cricketer"
+        tools:layout="@layout/fragment_best_cricketer" >
+        <action
+            android:id="@+id/action_bestCricketerFragment_to_flagQuesFragment"
+            app:destination="@id/flagQuesFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/userNameFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/flagQuesFragment"
+        android:name="com.anisjamadar26.triviaappdagger.ui.FlagQuesFragment"
+        android:label="fragment_flag_ques"
+        tools:layout="@layout/fragment_flag_ques" >
+        <action
+            android:id="@+id/action_flagQuesFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/userNameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.anisjamadar26.triviaappdagger.ui.summary.SummaryFragment"
+        android:label="fragment_summary"
+        tools:layout="@layout/fragment_summary" >
+        <action
+            android:id="@+id/action_summaryFragment_to_userNameFragment"
+            app:destination="@id/userNameFragment"
+            app:popUpTo="@id/userNameFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"/>
+        <action
+            android:id="@+id/action_summaryFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/userNameFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.anisjamadar26.triviaappdagger.ui.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+</navigation>
